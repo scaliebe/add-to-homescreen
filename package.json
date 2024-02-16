@@ -1,6 +1,6 @@
 {
-  "name": "add-to-homescreen",
-  "version": "1.0.0",
+  "name": "add-to-homescreen-fork-scaliebe",
+  "version": "1.0.1",
   "description": "A simple JavaScript library to show a popup encouraging users to add a website to their home screen.",
   "main": "src/index.js",
   "scripts": {
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/add-to-homescreen.git"
+    "url": "git+https://github.com/scaliebe/add-to-homescreen.git"
   },
   "keywords": [
     "homescreen",
     "add",
     "popup"
   ],
-  "author": "Your Name <your@email.com>",
+  "author": "Sebastian Caliebe, Orginalcode by Philip Fung",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourusername/add-to-homescreen/issues"
+    "url": "https://github.com/scaliebe/add-to-homescreen/issues"
   },
-  "homepage": "https://github.com/yourusername/add-to-homescreen#readme",
+  "homepage": "https://github.com/scaliebe/add-to-homescreen#readme",
   "dependencies": {
     "add-to-homescreen": "^3.2.6",
     "copy-webpack-plugin": "^11.0.0"
