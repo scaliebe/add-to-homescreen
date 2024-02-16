@@ -59,6 +59,12 @@ class AddToHomeScreen {
    * @param {string} textIosSafari3
    * @param {string} textIosSafari4
    * @param {string} textIosOpenSysbrowser1
+   * @param {string} textIosOpenSysbrowser2
+   * @param {string} textIosInAppBrowser
+   * @param {string} textAndroidChrome1
+   * @param {string} textAndroidChrome2
+   * @param {string} textAndroidChrome3
+   * @param {string} textAndroidChrome4
    */
   constructor({
     appName,
@@ -81,7 +87,13 @@ class AddToHomeScreen {
     textIosSafari2,
     textIosSafari3,
     textIosSafari4,
-    textIosOpenSysbrowser1
+    textIosOpenSysbrowser1,
+    textIosOpenSysbrowser2,
+    textIosInAppBrowser,
+    textAndroidChrome1,
+    textAndroidChrome2,
+    textAndroidChrome3,
+    textAndroidChrome4
   }) {
     this.appName = appName;
     this._assertArg(
@@ -129,6 +141,13 @@ class AddToHomeScreen {
     this.textIosSafari3 = textIosSafari3 == undefined ? `You may need to scroll down to find this menu item.` : textIosSafari3;
     this.textIosSafari4 = textIosSafari4 == undefined ? `Open the [APPICON] app.` : textIosSafari4;
     this.textIosOpenSysbrowser1 = textIosOpenSysbrowser1 == undefined ? `Tap the [BUTTON] button above.` : textIosOpenSysbrowser1;
+    this.textIosOpenSysbrowser2 = textIosOpenSysbrowser2 == undefined ? `Tap [ADHS_START] Open in browser [ADHS_END].` : textIosOpenSysbrowser2;
+    this.textIosInAppBrowser = textIosInAppBrowser == undefined ? `Tap the [BUTTON] button below to open your system browser.` : textIosInAppBrowser;
+    this.textAndroidChrome1 = textAndroidChrome1 == undefined ? `Tap the [BUTTON] button in the browser bar.` : textAndroidChrome1
+    this.textAndroidChrome2 = textAndroidChrome2 == undefined ? `Tap the [BUTTON]` : textAndroidChrome2
+    this.textAndroidChrome3 = textAndroidChrome3 == undefined ? `or [INSTALLAPP] button.` : textAndroidChrome3
+    this.textAndroidChrome4 = textAndroidChrome4 == undefined ? `Open the [APPICON] app.` : textAndroidChrome4
+
   }
 
 
@@ -552,7 +571,7 @@ class AddToHomeScreen {
       this._genTitle() +
       this._genListStart() +
       this._genListItem(`1`, textIosOpenSysbrowser1.replace(/\[BUTTON\]/g, `<img class="adhs-more-button" src="` + this._genAssetUrl('generic-more-button.svg') + `"/>`)) +
-      this._genListItem(`2`, `Tap <span class="adhs-emphasis">Open in browser</span>.`) +
+      this._genListItem(`2`, textIosOpenSysbrowser2.replace(/\[ADHS_START\]/g, `<span class="adhs-emphasis">`).replace(/\[ADHS_END\]/g, `</span>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-inappbrowser-openinsystembrowser-bouncing-arrow-container">
@@ -569,7 +588,7 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, `Tap the <img class="adhs-more-button" src="` + this._genAssetUrl('openinsafari-button.png') + `"/> button below to open your system browser.`) +
+      this._genListItem(`1`, textIosInAppBrowser.replace(/\[BUTTON\]/g, `<img class="adhs-more-button" src="` + this._genAssetUrl('openinsafari-button.png') + `"/>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-inappbrowser-openinsafari-bouncing-arrow-container">
@@ -586,10 +605,10 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, `Tap the <img class="adhs-android-chrome-more-button" src="` + this._genAssetUrl('android-chrome-more-button.svg') + `"/> button in the browser bar.`) +
-      this._genListItem(`2`, `Tap the <img class="adhs-android-chrome-add-to-homescreen-button" src="` + this._genAssetUrl('android-chrome-add-to-home-screen-button.svg') + `"/>` +
-        `or <img class="adhs-android-chrome-install-app" src="` + this._genAssetUrl('android-chrome-install-app.svg') + `"/> button.`) +
-      this._genListItem(`3`, `Open the <img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/> app.`) +
+      this._genListItem(`1`, textAndroidChrome1.replace(/\[BUTTON\]/g, `<img class="adhs-android-chrome-more-button" src="` + this._genAssetUrl('android-chrome-more-button.svg') + `"/>`)) +
+      this._genListItem(`2`, textAndroidChrome2.replace(/\[BUTTON\]/g, `<img class="adhs-android-chrome-add-to-homescreen-button" src="` + this._genAssetUrl('android-chrome-add-to-home-screen-button.svg') + `"/>`) +
+            textAndroidChrome3.replace(/\[INSTALLAPP\]/g, `<img class="adhs-android-chrome-install-app" src="` + this._genAssetUrl('android-chrome-install-app.svg') + `"/>`)) +
+      this._genListItem(`3`, textAndroidChrome4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-android-chrome-bouncing-arrow-container">
