@@ -261,8 +261,31 @@
                                                                                             // Optional. Default: window.AddToHomeScreen.SHOW_ERRMSG_UNSUPPORTED.ALL 
           allowUserToCloseModal: true,                           // Allow user to close the 'Add to Homescreen' message? Not allowing will increase installs.
                                                         // Optional. Default: false.
-          maxModalDisplayCount: -1                                // If set, the modal will only show this many times.
+          maxModalDisplayCount: -1,                                // If set, the modal will only show this many times.
                                                         // Optional. Default: -1 (no limit).  (Debugging: Use this.clearModalDisplayCount() to reset the count)
+
+          errorMessageForUnsupportedBrowsers1 : `XXX Please open this website with the Safari or Chrome app.`,
+          errorMessageForUnsupportedBrowsers2 : `YYY Adding to home screen is only supported in Safari or Chrome on IOS.`,
+          errorMessageForUnsupportedBrowsers3 : `XXX Please open this website with the Chrome app.`,
+          errorMessageForUnsupportedBrowsers4 : `XXX Adding to home screen is only supported in Chrome on Android.`,
+          errorMessageForUnsupportedBrowsers5 : `XXX Please open this website on a mobile device.`,
+          errorMessageForUnsupportedBrowsers6 : `XXX Installing to your home screen is currently only supported on IOS and Android.`,
+          buttonTextCopyToClipboard : `XXX Copy Website Link to Clipboard`,
+          titleText : `XXX Install the [APPNAME] app to continue`,
+          messageLinkCopied : 'XXX Link Copied to Clipboard!',
+          messageLinkCopiedError : 'XXX Failed to Copy to Clipboard! (Try Again from "https://" Link)',
+          textIosSafari1 : `XXX Tap the [BUTTON] button below.`,
+          textIosSafari2 : `XXX Select [EXAMPLEIMAGE] from the menu that pops up.`,
+          textIosSafari3 : `XXX You may need to scroll down to find this menu item.`,
+          textIosSafari4 : `XXX Open the [APPICON] app.`,
+          textIosOpenSysbrowser1 : `XXX Tap the [BUTTON] button above.`,
+          textIosOpenSysbrowser2 : `XXX Tap [ADHS_START] Open in browser [ADHS_END].`,
+          textIosInAppBrowser : `XXX Tap the [BUTTON] button below to open your system browser.`,
+          textAndroidChrome1 : `XXX Tap the [BUTTON] button in the browser bar.`,
+          textAndroidChrome2 : `XXX Tap the [BUTTON]`,
+          textAndroidChrome3 : `XXX or [INSTALLAPP] button.`,
+          textAndroidChrome4 : `XXX Open the [APPICON] app.`
+
         }
       );
       window.AddToHomeScreenInstance.show(); // only shown if web app is not already added to homescreen

@@ -127,11 +127,11 @@ class AddToHomeScreen {
     );
     this.closeEventListener = null;
     this.errorMessageForUnsupportedBrowsers1 = errorMessageForUnsupportedBrowsers1 == undefined ? `Please open this website with the Safari or Chrome app.` : errorMessageForUnsupportedBrowsers1;
-    this.errorMessageForUnsupportedBrowsers2 = errorMessageForUnsupportedBrowsers2 == undefined ? `Adding to home screen is only supported in Safari or Chrome on IOS.` : this.errorMessageForUnsupportedBrowsers2;
+    this.errorMessageForUnsupportedBrowsers2 = errorMessageForUnsupportedBrowsers2 == undefined ? `Adding to home screen is only supported in Safari or Chrome on IOS.` : errorMessageForUnsupportedBrowsers2;
     this.errorMessageForUnsupportedBrowsers3 = errorMessageForUnsupportedBrowsers3 == undefined ? `Please open this website with the Chrome app.` : errorMessageForUnsupportedBrowsers3;
-    this.errorMessageForUnsupportedBrowsers4 = errorMessageForUnsupportedBrowsers4 == undefined ? `Adding to home screen is only supported in Chrome on Android.` : this.errorMessageForUnsupportedBrowsers4;
-    this.errorMessageForUnsupportedBrowsers5 = errorMessageForUnsupportedBrowsers5 == undefined ? `Please open this website on a mobile device.` : this.errorMessageForUnsupportedBrowsers5;
-    this.errorMessageForUnsupportedBrowsers6 = errorMessageForUnsupportedBrowsers6 == undefined ? `Installing to your home screen is currently only supported on IOS and Android.` : this.errorMessageForUnsupportedBrowsers6;
+    this.errorMessageForUnsupportedBrowsers4 = errorMessageForUnsupportedBrowsers4 == undefined ? `Adding to home screen is only supported in Chrome on Android.` : errorMessageForUnsupportedBrowsers4;
+    this.errorMessageForUnsupportedBrowsers5 = errorMessageForUnsupportedBrowsers5 == undefined ? `Please open this website on a mobile device.` : errorMessageForUnsupportedBrowsers5;
+    this.errorMessageForUnsupportedBrowsers6 = errorMessageForUnsupportedBrowsers6 == undefined ? `Installing to your home screen is currently only supported on IOS and Android.` : errorMessageForUnsupportedBrowsers6;
     this.buttonTextCopyToClipboard = buttonTextCopyToClipboard == undefined ? `Copy Website Link to Clipboard` : buttonTextCopyToClipboard;
     this.titleText = titleText == undefined ? `Install the [APPNAME] app to continue` : titleText;
     this.messageLinkCopied = messageLinkCopied == undefined ? 'Link Copied to Clipboard!' : messageLinkCopied;
