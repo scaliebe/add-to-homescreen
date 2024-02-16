@@ -532,9 +532,9 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, textIosSafari1.replace(/\[BUTTON\]/g, `<img class="adhs-ios-safari-sharing-api-button" src="` + this._genAssetUrl('ios-safari-sharing-api-button.svg') + `"/>`)) +
-      this._genListItem(`2`, textIosSafari2.replace(/\[EXAMPLEIMAGE\]/g, `<img class="adhs-ios-safari-add-to-home-screen-button" src="` + this._genAssetUrl('ios-safari-add-to-home-screen-button.svg') + `"/>`) + `<span class="adhs-emphasis">` + textIosSafari3 + `</span>`) +
-      this._genListItem(`3`, textIosSafari4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
+      this._genListItem(`1`, this.textIosSafari1.replace(/\[BUTTON\]/g, `<img class="adhs-ios-safari-sharing-api-button" src="` + this._genAssetUrl('ios-safari-sharing-api-button.svg') + `"/>`)) +
+      this._genListItem(`2`, this.textIosSafari2.replace(/\[EXAMPLEIMAGE\]/g, `<img class="adhs-ios-safari-add-to-home-screen-button" src="` + this._genAssetUrl('ios-safari-add-to-home-screen-button.svg') + `"/>`) + `<span class="adhs-emphasis">` + this.textIosSafari3 + `</span>`) +
+      this._genListItem(`3`, this.textIosSafari4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-ios-safari-bouncing-arrow-container">
@@ -551,9 +551,9 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, textIosChrome1.replace(/\[BUTTON\]/g, `<img class="adhs-ios-chrome-more-button" src="` + this._genAssetUrl('ios-chrome-more-button.svg') + `"/>`)) +
-      this._genListItem(`2`, textIosChrome2.replace(/\[EXAMPLEIMAGE\]/g, `<img class="adhs-ios-chrome-add-to-home-screen-button" src="` + this._genAssetUrl('ios-chrome-add-to-home-screen-button.svg') + `"/>`) + `<span class="adhs-emphasis">` + textIosChrome3 + `</span>`) +
-      this._genListItem(`3`, textIosChrome4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
+      this._genListItem(`1`, this.textIosChrome1.replace(/\[BUTTON\]/g, `<img class="adhs-ios-chrome-more-button" src="` + this._genAssetUrl('ios-chrome-more-button.svg') + `"/>`)) +
+      this._genListItem(`2`, this.textIosChrome2.replace(/\[EXAMPLEIMAGE\]/g, `<img class="adhs-ios-chrome-add-to-home-screen-button" src="` + this._genAssetUrl('ios-chrome-add-to-home-screen-button.svg') + `"/>`) + `<span class="adhs-emphasis">` + this.textIosChrome3 + `</span>`) +
+      this._genListItem(`3`, this.textIosChrome4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-ios-chrome-bouncing-arrow-container">
@@ -570,8 +570,8 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, textIosOpenSysbrowser1.replace(/\[BUTTON\]/g, `<img class="adhs-more-button" src="` + this._genAssetUrl('generic-more-button.svg') + `"/>`)) +
-      this._genListItem(`2`, textIosOpenSysbrowser2.replace(/\[ADHS_START\]/g, `<span class="adhs-emphasis">`).replace(/\[ADHS_END\]/g, `</span>`)) +
+      this._genListItem(`1`, this.textIosOpenSysbrowser1.replace(/\[BUTTON\]/g, `<img class="adhs-more-button" src="` + this._genAssetUrl('generic-more-button.svg') + `"/>`)) +
+      this._genListItem(`2`, this.textIosOpenSysbrowser2.replace(/\[ADHS_START\]/g, `<span class="adhs-emphasis">`).replace(/\[ADHS_END\]/g, `</span>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-inappbrowser-openinsystembrowser-bouncing-arrow-container">
@@ -588,7 +588,7 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, textIosInAppBrowser.replace(/\[BUTTON\]/g, `<img class="adhs-more-button" src="` + this._genAssetUrl('openinsafari-button.png') + `"/>`)) +
+      this._genListItem(`1`, this.textIosInAppBrowser.replace(/\[BUTTON\]/g, `<img class="adhs-more-button" src="` + this._genAssetUrl('openinsafari-button.png') + `"/>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-inappbrowser-openinsafari-bouncing-arrow-container">
@@ -605,10 +605,10 @@ class AddToHomeScreen {
       this._genModalStart() +
       this._genTitle() +
       this._genListStart() +
-      this._genListItem(`1`, textAndroidChrome1.replace(/\[BUTTON\]/g, `<img class="adhs-android-chrome-more-button" src="` + this._genAssetUrl('android-chrome-more-button.svg') + `"/>`)) +
-      this._genListItem(`2`, textAndroidChrome2.replace(/\[BUTTON\]/g, `<img class="adhs-android-chrome-add-to-homescreen-button" src="` + this._genAssetUrl('android-chrome-add-to-home-screen-button.svg') + `"/>`) +
-            textAndroidChrome3.replace(/\[INSTALLAPP\]/g, `<img class="adhs-android-chrome-install-app" src="` + this._genAssetUrl('android-chrome-install-app.svg') + `"/>`)) +
-      this._genListItem(`3`, textAndroidChrome4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
+      this._genListItem(`1`, this.textAndroidChrome1.replace(/\[BUTTON\]/g, `<img class="adhs-android-chrome-more-button" src="` + this._genAssetUrl('android-chrome-more-button.svg') + `"/>`)) +
+      this._genListItem(`2`, this.textAndroidChrome2.replace(/\[BUTTON\]/g, `<img class="adhs-android-chrome-add-to-homescreen-button" src="` + this._genAssetUrl('android-chrome-add-to-home-screen-button.svg') + `"/>`) +
+            this.textAndroidChrome3.replace(/\[INSTALLAPP\]/g, `<img class="adhs-android-chrome-install-app" src="` + this._genAssetUrl('android-chrome-install-app.svg') + `"/>`)) +
+      this._genListItem(`3`, this.textAndroidChrome4.replace(/\[APPICON\]/g, `<img class="adhs-your-app-icon" src="` + this.appIconUrl + `"/>`)) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-android-chrome-bouncing-arrow-container">
